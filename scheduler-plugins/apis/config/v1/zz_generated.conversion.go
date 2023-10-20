@@ -29,8 +29,9 @@ import (
 	conversion "k8s.io/apimachinery/pkg/conversion"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	configv1 "k8s.io/kube-scheduler/config/v1"
-	apisconfig "k8s.io/kubernetes/pkg/scheduler/apis/config"
-	config "sigs.k8s.io/scheduler-plugins/apis/config"
+
+	apisconfig "github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/pkg/scheduler/apis/config"
+	config "github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/scheduler-plugins/apis/config"
 )
 
 func init() {

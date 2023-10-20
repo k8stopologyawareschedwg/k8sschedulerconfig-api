@@ -20,7 +20,7 @@ import (
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/apimachinery/pkg/util/validation/field"
 
-	"sigs.k8s.io/scheduler-plugins/apis/config"
+	"github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/scheduler-plugins/apis/config"
 )
 
 var validScoringStrategy = sets.NewString(

@@ -24,7 +24,8 @@ import (
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"
 	schedulerconfigv1beta3 "k8s.io/kube-scheduler/config/v1beta3"
-	k8sschedulerconfigv1beta3 "k8s.io/kubernetes/pkg/scheduler/apis/config/v1beta3"
+
+	k8sschedulerconfigv1beta3 "github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/pkg/scheduler/apis/config/v1beta3"
 )
 
 var (

@@ -20,7 +20,8 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	schedschemev1beta2 "k8s.io/kube-scheduler/config/v1beta2"
-	schedconfig "k8s.io/kubernetes/pkg/scheduler/apis/config"
+
+	schedconfig "github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/pkg/scheduler/apis/config"
 )
 
 // SchemeGroupVersion is group version used to register these objects

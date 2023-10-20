@@ -23,7 +23,8 @@ import (
 	"k8s.io/apimachinery/pkg/api/resource"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	schedulerconfigv1 "k8s.io/kube-scheduler/config/v1"
-	k8sschedulerconfigv1 "k8s.io/kubernetes/pkg/scheduler/apis/config/v1"
+
+	k8sschedulerconfigv1 "github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/pkg/scheduler/apis/config/v1"
 )
 
 var (
