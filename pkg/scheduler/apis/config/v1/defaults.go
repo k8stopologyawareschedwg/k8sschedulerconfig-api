@@ -25,8 +25,8 @@ import (
 	configv1 "k8s.io/kube-scheduler/config/v1"
 	"k8s.io/utils/pointer"
 
-	config "github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/apis/config"
 	"github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/kubeshim/features"
+	config "github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/pkg/scheduler/apis/config"
 )
 
 var defaultResourceSpec = []configv1.ResourceSpec{
