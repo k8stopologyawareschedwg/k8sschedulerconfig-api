@@ -20,12 +20,12 @@ import (
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/apiserver/pkg/util/feature"
 	componentbaseconfigv1alpha1 "k8s.io/component-base/config/v1alpha1"
 	"k8s.io/kube-scheduler/config/v1beta3"
 	"k8s.io/utils/pointer"
 
 	"github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/kubeshim/features"
+	"github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/kubeshim/utilfeature"
 	config "github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/pkg/scheduler/apis/config"
 )
 
@@ -191,7 +191,7 @@ func SetDefaults_VolumeBindingArgs(obj *v1beta3.VolumeBindingArgs) {
 	if obj.BindTimeoutSeconds == nil {
 		obj.BindTimeoutSeconds = pointer.Int64(600)
 	}
-	if len(obj.Shape) == 0 && feature.DefaultFeatureGate.Enabled(features.VolumeCapacityPriority) {
+	if len(obj.Shape) == 0 && utilfeature.DefaultFeatureGate.Enabled(features.VolumeCapacityPriority) {
 		obj.Shape = []v1beta3.UtilizationShapePoint{
 			{
 				Utilization: 0,
