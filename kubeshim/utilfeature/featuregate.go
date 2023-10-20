@@ -14,11 +14,23 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package enabled
-
-// keep in sync with k8s.io/kubernetes/pkg/features/kube_features.go
-const (
-	DynamicResourceAllocation = false
-	PodSchedulingReadiness    = true
-	VolumeCapacityPriority    = false
+import (
+	"github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/kubeshim/features"
 )
+
+type FeatureGateShim map[string]bool
+
+func (fg FeatureGateShim) Enabled(name string) bool {
+	return fg[name]
+}
+
+var DefaultFeatureGate FeatureGateShim
+
+func init() {
+	// keep in sync with k8s.io/kubernetes/pkg/features/kube_features.go
+	DefaultFeatureGate = map[string]bool{
+		DynamicResourceAllocation: false,
+		PodSchedulingReadiness:    true,
+		VolumeCapacityPriority:    false,
+	}
+}

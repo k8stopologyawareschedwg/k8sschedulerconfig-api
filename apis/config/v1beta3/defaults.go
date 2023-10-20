@@ -23,9 +23,10 @@ import (
 	"k8s.io/apiserver/pkg/util/feature"
 	componentbaseconfigv1alpha1 "k8s.io/component-base/config/v1alpha1"
 	"k8s.io/kube-scheduler/config/v1beta3"
-	"k8s.io/kubernetes/pkg/features"
-	"k8s.io/kubernetes/pkg/scheduler/apis/config"
 	"k8s.io/utils/pointer"
+
+	config "github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/apis/config"
+	"github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/kubeshim/features"
 )
 
 var defaultResourceSpec = []v1beta3.ResourceSpec{

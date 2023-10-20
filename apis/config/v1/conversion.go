@@ -24,7 +24,8 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	v1 "k8s.io/kube-scheduler/config/v1"
-	"k8s.io/kubernetes/pkg/scheduler/apis/config"
+
+	config "github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/apis/config"
 )
 
 var (

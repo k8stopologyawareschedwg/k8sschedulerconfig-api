@@ -20,10 +20,11 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	config "k8s.io/kubernetes/pkg/scheduler/apis/config"
-	configv1 "k8s.io/kubernetes/pkg/scheduler/apis/config/v1"
-	configv1beta2 "k8s.io/kubernetes/pkg/scheduler/apis/config/v1beta2"
-	configv1beta3 "k8s.io/kubernetes/pkg/scheduler/apis/config/v1beta3"
+
+	config "github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/apis/config"
+	configv1 "github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/apis/config/v1"
+	configv1beta2 "github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/apis/config/v1beta2"
+	configv1beta3 "github.com/k8stopologyawareschedwg/k8sschedulerconfig-api/apis/config/v1beta3"
 )
 
 var (
